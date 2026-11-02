@@ -249,41 +249,41 @@
     </div>
   </div>
 
-  <!-- STICKY NAVIGATION HEADER -->
+  <!-- STICKY NAVIGATION HEADER (Single-Line Editorial Layout, Zero Wrapping) -->
   <header class="sticky top-0 z-40 glass-nav">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between gap-3">
-      <!-- Brand Identity -->
-      <a href="#hero" class="flex items-center gap-3 group">
-        <div class="w-11 h-11 rounded-full overflow-hidden border border-[#7A5A1E]/40 flex-shrink-0">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between gap-4">
+      <!-- Brand Identity (Strict single-line, no vertical squishing) -->
+      <a href="#hero" class="flex items-center gap-3 group flex-shrink-0 whitespace-nowrap">
+        <div class="w-10 h-10 rounded-full overflow-hidden border border-[#7A5A1E]/40 flex-shrink-0 shadow-xs">
           <img src="assets/images/MAHV6wJch4k.jpg" alt="Mavy Massiel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
         </div>
-        <div>
-          <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight block leading-none">MAVY MASSIEL</span>
-          <span class="text-[10px] sm:text-xs uppercase tracking-[0.22em] block mt-0.5" style="color: var(--accent-primary);">UGC Creator • Dubai, UAE</span>
+        <div class="flex flex-col justify-center">
+          <span class="font-serif text-lg sm:text-xl font-bold tracking-wider leading-none">MAVY MASSIEL</span>
+          <span class="text-[9px] uppercase tracking-[0.24em] mt-1 leading-none" style="color: var(--accent-primary);">DUBAI • UGC CREATOR</span>
         </div>
       </a>
 
-      <!-- Desktop Links -->
-      <nav class="hidden lg:flex items-center gap-7 text-sm font-medium">
-        <a href="#about" class="hover:opacity-70 transition-opacity" data-i18n="nav_about">About & Intro Reel</a>
-        <a href="#portfolio" class="hover:opacity-70 transition-opacity" data-i18n="nav_portfolio">UGC Video Portfolio (13)</a>
-        <a href="#photography" class="hover:opacity-70 transition-opacity" data-i18n="nav_photos">UGC Photography</a>
-        <a href="#services" class="hover:opacity-70 transition-opacity" data-i18n="nav_services">Deliverables & Packages</a>
-        <a href="#mediakit" class="hover:opacity-70 transition-opacity" data-i18n="nav_mediakit">Media Kit & Metrics</a>
+      <!-- Desktop Links (Clean single-line whitespace-nowrap) -->
+      <nav class="hidden lg:flex items-center gap-6 xl:gap-8 text-xs xl:text-sm font-medium whitespace-nowrap">
+        <a href="#about" class="hover:opacity-70 transition-opacity py-1" data-i18n="nav_about">About</a>
+        <a href="#portfolio" class="hover:opacity-70 transition-opacity py-1" data-i18n="nav_portfolio">Video Portfolio</a>
+        <a href="#photography" class="hover:opacity-70 transition-opacity py-1" data-i18n="nav_photos">Photography</a>
+        <a href="#services" class="hover:opacity-70 transition-opacity py-1" data-i18n="nav_services">Packages</a>
+        <a href="#mediakit" class="hover:opacity-70 transition-opacity py-1" data-i18n="nav_mediakit">Media Kit</a>
       </nav>
 
-      <!-- Actions: Language, Theme, Admin Pill, CTA, Mobile Menu -->
-      <div class="flex items-center gap-2 sm:gap-3">
+      <!-- Right Controls (Strict single-line whitespace-nowrap) -->
+      <div class="flex items-center gap-2 sm:gap-2.5 flex-shrink-0 whitespace-nowrap">
         <!-- Language Switcher -->
-        <div class="hidden sm:flex items-center rounded-full p-0.5 border text-xs font-semibold" style="border-color: var(--border-subtle); background-color: var(--bg-surface);">
+        <div class="hidden sm:flex items-center rounded-full p-0.5 border text-[11px] font-semibold" style="border-color: var(--border-subtle); background-color: var(--bg-surface);">
           <button onclick="setLanguage('en')" id="lang-en" class="px-2.5 py-1 rounded-full transition-colors bg-[#7A5A1E] text-white">EN</button>
           <button onclick="setLanguage('es')" id="lang-es" class="px-2.5 py-1 rounded-full transition-colors">ES</button>
-          <button onclick="setLanguage('ar')" id="lang-ar" class="px-2.5 py-1 rounded-full transition-colors font-arabic">عربي</button>
+          <button onclick="setLanguage('ar')" id="lang-ar" class="px-2.5 py-1 rounded-full transition-colors font-arabic">AR</button>
         </div>
 
         <!-- Theme Toggle -->
         <button onclick="toggleTheme()" id="themeToggleBtn" aria-label="Toggle Light/Dark Mode"
-                class="w-10 h-10 rounded-full flex items-center justify-center border transition-colors hover:opacity-80"
+                class="w-9 h-9 rounded-full flex items-center justify-center border transition-colors hover:opacity-80 flex-shrink-0"
                 style="border-color: var(--border-subtle); background-color: var(--bg-surface);">
           <svg id="sunIcon" class="w-4 h-4 hidden" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <circle cx="12" cy="12" r="5"></circle>
@@ -294,27 +294,27 @@
           </svg>
         </button>
 
-        <!-- Admin Golden Pill (Unlocked or Login trigger) -->
+        <!-- Compact Admin Button -->
         <button onclick="handleAdminNavClick()" id="adminNavBtn"
-                class="px-3 py-1.5 rounded-full text-xs font-semibold border flex items-center gap-1.5 transition-all"
+                class="h-9 px-3 rounded-full text-xs font-semibold border flex items-center gap-1.5 transition-all hover:opacity-80 flex-shrink-0"
                 style="border-color: var(--accent-primary); color: var(--accent-primary); background-color: var(--bg-surface);"
                 title="Creator Admin Panel">
           <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"/>
           </svg>
-          <span id="adminNavLabel">Admin</span>
+          <span id="adminNavLabel" class="hidden xl:inline">Admin</span>
         </button>
 
-        <!-- Primary Action Button (Strict Rule 8.3: "Book Appointment" / "Reservar Cita") -->
+        <!-- Primary Action Button (Single-Line Pill) -->
         <button onclick="openBookingModal('Brand Campaign Inquiry')"
-                class="hidden md:inline-flex items-center px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold tracking-wide btn-gold shadow-sm"
+                class="hidden md:inline-flex items-center justify-center h-9 px-5 rounded-full text-xs font-semibold tracking-wide btn-gold shadow-sm whitespace-nowrap flex-shrink-0"
                 data-i18n="cta_book">
           Book Appointment
         </button>
 
         <!-- Mobile Hamburger Button -->
         <button onclick="toggleMobileDrawer(true)" aria-label="Open Menu"
-                class="lg:hidden w-10 h-10 rounded-full flex items-center justify-center border"
+                class="lg:hidden w-9 h-9 rounded-full flex items-center justify-center border flex-shrink-0"
                 style="border-color: var(--border-subtle); background-color: var(--bg-surface);">
           <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
@@ -351,11 +351,11 @@
 
       <!-- Mobile Navigation Links -->
       <nav class="mt-6 flex flex-col gap-3 text-base font-medium">
-        <a href="#about" onclick="toggleMobileDrawer(false)" class="py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_about">About & Intro Reel</a>
-        <a href="#portfolio" onclick="toggleMobileDrawer(false)" class="py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_portfolio">UGC Video Portfolio (13)</a>
-        <a href="#photography" onclick="toggleMobileDrawer(false)" class="py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_photos">UGC Photography</a>
-        <a href="#services" onclick="toggleMobileDrawer(false)" class="py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_services">Deliverables & Packages</a>
-        <a href="#mediakit" onclick="toggleMobileDrawer(false)" class="py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_mediakit">Media Kit & Metrics</a>
+        <a href="#about" onclick="toggleMobileDrawer(false)" class="py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_about">About</a>
+        <a href="#portfolio" onclick="toggleMobileDrawer(false)" class="py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_portfolio">Video Portfolio</a>
+        <a href="#photography" onclick="toggleMobileDrawer(false)" class="py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_photos">Photography</a>
+        <a href="#services" onclick="toggleMobileDrawer(false)" class="py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_services">Packages</a>
+        <a href="#mediakit" onclick="toggleMobileDrawer(false)" class="py-2 border-b" style="border-color: var(--border-subtle);" data-i18n="nav_mediakit">Media Kit</a>
       </nav>
     </div>
 
@@ -369,108 +369,161 @@
   </aside>
 
   <!-- ===================================================================== -->
-  <!-- 1. EDITORIAL HERO SECTION (Quiet Luxury + Arch Frame + Bilingual Tag) -->
+  <!-- 1. CINEMATIC VIDEO BACKGROUND HERO SECTION                            -->
   <!-- ===================================================================== -->
-  <section id="hero" class="relative pt-8 pb-16 md:py-20 lg:py-24 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+  <section id="hero" class="relative min-h-[88vh] flex items-center py-14 md:py-20 lg:py-24 overflow-hidden bg-[#0c1210] text-[#F6F1E7]">
+
+    <!-- Full-Bleed Background Video Layer (Plays Mavy's Real UGC Campaigns in Loop) -->
+    <div class="absolute inset-0 z-0 overflow-hidden">
+      <video id="heroBgVideo"
+             src="assets/videos/VAHYM8XpDnI.mp4"
+             poster="assets/posters/VAHYM8XpDnI.jpg"
+             autoplay
+             muted
+             loop
+             playsinline
+             class="w-full h-full object-cover object-center scale-105 opacity-65 transition-opacity duration-700"></video>
+      <!-- Multi-layered Luxury Cinema Scrim for Perfect Typography Contrast -->
+      <div class="absolute inset-0 bg-gradient-to-r from-[#09100D]/92 via-[#09100D]/72 to-[#09100D]/35"></div>
+      <div class="absolute inset-0 bg-gradient-to-t from-[#09100D] via-transparent to-[#09100D]/50"></div>
+    </div>
+
+    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
 
-        <!-- Left Column: Editorial Typography & Value Proposition (7 cols) -->
+        <!-- Left Column: Editorial Typography & Value Proposition over Video (7 cols) -->
         <div class="lg:col-span-7 space-y-6 text-left">
-          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border text-xs font-semibold tracking-widest uppercase"
-               style="border-color: var(--border-subtle); background-color: var(--bg-surface); color: var(--accent-primary);">
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full border border-[#D9B76F]/40 bg-black/40 backdrop-blur-md text-xs font-semibold tracking-widest uppercase text-[#D9B76F]">
             <span>📍 Dubai, United Arab Emirates</span>
             <span>•</span>
             <span data-i18n="hero_bilingual_badge">EN & ES Bilingual Creator</span>
           </div>
 
           <div class="space-y-2">
-            <p class="font-serif italic text-2xl sm:text-3xl md:text-4xl" style="color: var(--accent-secondary);" data-i18n="hero_script">
+            <p class="font-serif italic text-2xl sm:text-3xl md:text-4xl text-[#D9B76F]" data-i18n="hero_script">
               "Real moments, Real life"
             </p>
-            <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.25rem] font-bold tracking-tight leading-[0.95]">
-              MAVY <span class="italic font-normal" style="color: var(--accent-primary);">MASSIEL</span>
+            <h1 class="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-[5.4rem] font-bold tracking-tight leading-[0.94] text-white drop-shadow-sm">
+              MAVY <span class="italic font-normal text-[#D9B76F]">MASSIEL</span>
             </h1>
-            <p class="font-display text-lg sm:text-xl md:text-2xl font-semibold tracking-wide pt-2" style="color: var(--text-secondary);" data-i18n="hero_role">
+            <p class="font-display text-base sm:text-lg md:text-xl font-semibold tracking-[0.14em] uppercase pt-2 text-[#E6DEC8]" data-i18n="hero_role">
               UGC & LIFESTYLE CONTENT CREATOR IN UAE
             </p>
           </div>
 
-          <p class="text-base sm:text-lg leading-relaxed max-w-2xl" style="color: var(--text-muted);" data-i18n="hero_desc">
+          <p class="text-base sm:text-lg leading-relaxed max-w-2xl text-[#E6DEC8]/90" data-i18n="hero_desc">
             Crafting high-converting, emotionally resonant short-form video ads (Reels, TikTok & Spark Ads) and tactile product photography for global & GCC brands across Skincare, Beauty, Niche Fragrances, Hair Care, Motherhood, and Dubai Hospitality.
           </p>
 
-          <!-- Key Highlights Pills -->
+          <!-- Key Highlights Pills (Glassmorphic over Hero Video) -->
           <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-2">
-            <div class="luxury-card rounded-2xl p-3.5 text-center">
-              <p class="font-serif text-2xl sm:text-3xl font-bold" style="color: var(--accent-primary);">36K+</p>
-              <p class="text-[11px] uppercase tracking-wider mt-0.5 opacity-75" data-i18n="stat_views">Monthly Views</p>
+            <div class="rounded-2xl p-3.5 text-center bg-white/10 backdrop-blur-md border border-white/15">
+              <p class="font-serif text-2xl sm:text-3xl font-bold text-[#D9B76F]">36K+</p>
+              <p class="text-[11px] uppercase tracking-wider mt-0.5 text-white/80" data-i18n="stat_views">Monthly Views</p>
             </div>
-            <div class="luxury-card rounded-2xl p-3.5 text-center">
-              <p class="font-serif text-2xl sm:text-3xl font-bold" style="color: var(--accent-primary);">14+</p>
-              <p class="text-[11px] uppercase tracking-wider mt-0.5 opacity-75" data-i18n="stat_campaigns">Video Campaigns</p>
+            <div class="rounded-2xl p-3.5 text-center bg-white/10 backdrop-blur-md border border-white/15">
+              <p class="font-serif text-2xl sm:text-3xl font-bold text-[#D9B76F]">14+</p>
+              <p class="text-[11px] uppercase tracking-wider mt-0.5 text-white/80" data-i18n="stat_campaigns">Video Campaigns</p>
             </div>
-            <div class="luxury-card rounded-2xl p-3.5 text-center">
-              <p class="font-serif text-2xl sm:text-3xl font-bold" style="color: var(--accent-primary);">EN / ES</p>
-              <p class="text-[11px] uppercase tracking-wider mt-0.5 opacity-75" data-i18n="stat_bilingual">100% Bilingual</p>
+            <div class="rounded-2xl p-3.5 text-center bg-white/10 backdrop-blur-md border border-white/15">
+              <p class="font-serif text-2xl sm:text-3xl font-bold text-[#D9B76F]">EN / ES</p>
+              <p class="text-[11px] uppercase tracking-wider mt-0.5 text-white/80" data-i18n="stat_bilingual">100% Bilingual</p>
             </div>
-            <div class="luxury-card rounded-2xl p-3.5 text-center">
-              <p class="font-serif text-2xl sm:text-3xl font-bold" style="color: var(--accent-primary);">48–72h</p>
-              <p class="text-[11px] uppercase tracking-wider mt-0.5 opacity-75" data-i18n="stat_delivery">UAE Delivery</p>
+            <div class="rounded-2xl p-3.5 text-center bg-white/10 backdrop-blur-md border border-white/15">
+              <p class="font-serif text-2xl sm:text-3xl font-bold text-[#D9B76F]">48–72h</p>
+              <p class="text-[11px] uppercase tracking-wider mt-0.5 text-white/80" data-i18n="stat_delivery">UAE Delivery</p>
             </div>
           </div>
 
           <!-- Hero Action Bar -->
-          <div class="flex flex-wrap items-center gap-4 pt-3">
+          <div class="flex flex-wrap items-center gap-3.5 pt-3">
             <button onclick="openBookingModal('Hero Brand Collaboration')"
-                    class="px-7 py-4 rounded-full text-sm sm:text-base font-semibold tracking-wide btn-gold shadow-lg"
+                    class="px-7 py-4 rounded-full text-sm sm:text-base font-semibold tracking-wide bg-[#D9B76F] text-[#14201B] hover:brightness-110 transition-all shadow-xl"
                     data-i18n="cta_book">
               Book Appointment
             </button>
             <a href="#portfolio"
-               class="px-6 py-4 rounded-full text-sm sm:text-base font-semibold border transition-all hover:opacity-80 flex items-center gap-2"
-               style="border-color: var(--accent-primary); color: var(--text-primary); background-color: var(--bg-surface);">
-              <svg class="w-4 h-4" style="color: var(--accent-primary);" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+               class="px-6 py-4 rounded-full text-sm sm:text-base font-semibold border border-white/30 bg-white/10 backdrop-blur-md text-white transition-all hover:bg-white/20 flex items-center gap-2">
+              <svg class="w-4 h-4 text-[#D9B76F]" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
               <span data-i18n="hero_watch_work">Explore 13 Brand Videos</span>
             </a>
-            <a href="#about"
-               class="px-5 py-4 rounded-full text-xs sm:text-sm font-medium underline underline-offset-4 opacity-80 hover:opacity-100"
-               data-i18n="hero_meet_mavy">
-              Watch 58s Creator Intro →
-            </a>
+            <button id="heroBgMuteBtn" onclick="toggleHeroBgAudio()"
+                    class="px-4 py-4 rounded-full text-xs sm:text-sm font-semibold border border-[#D9B76F]/40 bg-black/50 backdrop-blur-md text-[#D9B76F] hover:bg-black/70 transition-all">
+              🔇 Unmute Background Reel
+            </button>
+          </div>
+
+          <!-- Interactive Hero Background Video Selector -->
+          <div class="pt-3">
+            <p class="text-[11px] uppercase tracking-[0.2em] text-white/60 mb-2">Now Playing in Background — Click to Switch Campaign:</p>
+            <div class="flex flex-wrap items-center gap-2">
+              <button onclick="switchHeroBgVideo('assets/videos/VAHYM8XpDnI.mp4', 'assets/posters/VAHYM8XpDnI.jpg', 'Calvin Klein — Eternity Moment', this)"
+                      class="hero-vid-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-[#D9B76F] text-[#14201B] transition-all">
+                ✨ Calvin Klein Perfume
+              </button>
+              <button onclick="switchHeroBgVideo('assets/videos/VAHWsLC6QGA.mp4', 'assets/posters/VAHWsLC6QGA.jpg', 'Medicube — Pink Peptide Skincare', this)"
+                      class="hero-vid-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all">
+                🧴 Medicube Skincare
+              </button>
+              <button onclick="switchHeroBgVideo('assets/videos/VAHZYSkmVxg.mp4', 'assets/posters/VAHZYSkmVxg.jpg', 'Nive Perfume — Imperial Phoenix', this)"
+                      class="hero-vid-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all">
+                👑 Nive Imperial Phoenix
+              </button>
+              <button onclick="switchHeroBgVideo('assets/videos/VAHV6wH3A6U.mp4', 'assets/posters/VAHV6wH3A6U.jpg', 'Olaplex — Hair Care Routine', this)"
+                      class="hero-vid-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all">
+                💆🏽‍♀️ Olaplex Curls
+              </button>
+              <button onclick="switchHeroBgVideo('assets/videos/VAHZssBAlI4.mp4', 'assets/posters/VAHZssBAlI4.jpg', 'Frosty Flavors DXB — Dubai Foodie', this)"
+                      class="hero-vid-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all">
+                🍨 Dubai Foodie
+              </button>
+            </div>
           </div>
         </div>
 
-        <!-- Right Column: Classical Arch Portrait + Floating Preview Badge (5 cols) -->
-        <div class="lg:col-span-5 relative flex justify-center">
-          <div class="relative w-full max-w-md">
-            <!-- Classical Arch Portrait from Canva Page 1 (MAHV6wJch4k.jpg) -->
-            <div class="arch-frame aspect-[4/5] w-full relative group">
-              <img src="assets/images/MAHV6wJch4k.jpg" alt="Mavy Massiel — UGC & Lifestyle Content Creator in Dubai"
-                   class="w-full h-full object-cover object-center group-hover:scale-103 transition-transform duration-700" />
-              <div class="absolute inset-0 bg-gradient-to-t from-black/65 via-transparent to-transparent"></div>
-              <div class="absolute bottom-5 left-5 right-5 flex items-end justify-between text-white">
-                <div>
-                  <span class="text-[10px] uppercase tracking-[0.25em] px-2.5 py-1 rounded-full bg-white/20 backdrop-blur-md">Portfolio 2026</span>
-                  <p class="font-serif text-2xl font-semibold mt-2">Mavy Massiel</p>
-                  <p class="text-xs text-white/80">mavyugcdubai@gmail.com</p>
+        <!-- Right Column: Live Vertical Showreel Frame + Creator Card (5 cols) -->
+        <div class="lg:col-span-5 flex justify-center">
+          <div class="relative w-full max-w-[300px] sm:max-w-[320px]">
+            <div class="phone-mockup border border-[#D9B76F]/30 shadow-2xl">
+              <div class="phone-island"></div>
+              <div class="phone-screen group cursor-pointer"
+                   onclick="openVideoLightbox(document.getElementById('heroCardVideo').getAttribute('src'), document.getElementById('heroNowPlayingLabel').textContent, 'Featured Dubai UGC Campaign')">
+                <video id="heroCardVideo"
+                       src="assets/videos/VAHWsLC6QGA.mp4"
+                       poster="assets/posters/VAHWsLC6QGA.jpg"
+                       autoplay
+                       muted
+                       loop
+                       playsinline
+                       class="w-full h-full object-cover"></video>
+                <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-black/25"></div>
+
+                <div class="absolute top-9 left-3 right-3 flex items-center justify-between text-white z-10">
+                  <span class="px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider bg-black/60 backdrop-blur-md flex items-center gap-1.5">
+                    <span class="w-2 h-2 rounded-full bg-emerald-400 live-dot"></span> Featured Reel
+                  </span>
+                  <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#D9B76F] text-[#14201B]">9:16 HD</span>
                 </div>
-                <button onclick="openVideoLightbox('assets/videos/VAHYQBR3QEQ.mp4', 'About Me — Mavy Massiel (Bilingual UGC Creator Intro)', 'Creator Intro • EN/ES')"
-                        class="w-12 h-12 rounded-full bg-[#D9B76F] text-[#14201B] flex items-center justify-center shadow-lg hover:scale-105 transition-transform"
-                        title="Play Intro Video">
-                  <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-                </button>
+
+                <div class="absolute bottom-4 left-4 right-4 flex items-end justify-between text-white z-10">
+                  <div>
+                    <p class="text-[10px] uppercase tracking-widest text-[#D9B76F]">Tap for Fullscreen + Audio</p>
+                    <p id="heroNowPlayingLabel" class="font-serif text-xl font-bold leading-tight mt-0.5">Medicube — Pink Peptide Skincare</p>
+                    <p class="text-[11px] text-white/75">@mavy_96_m • Dubai, UAE</p>
+                  </div>
+                  <div class="w-11 h-11 rounded-full bg-[#D9B76F] text-[#14201B] flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform flex-shrink-0">
+                    <svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <!-- Floating Social Handle Card -->
-            <div class="luxury-card rounded-2xl p-3.5 absolute -bottom-5 -left-3 sm:-left-6 flex items-center gap-3 max-w-[240px]">
-              <div class="w-10 h-10 rounded-full flex items-center justify-center flex-shrink-0" style="background-color: var(--bg-elevated); color: var(--accent-primary);">
-                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-              </div>
-              <div>
-                <p class="text-xs font-bold">@mavy_96_m</p>
-                <p class="text-[11px] opacity-75">Instagram & TikTok • UAE</p>
+            <!-- Creator Portrait Floating Badge -->
+            <div class="rounded-2xl p-3 bg-[#121D18]/95 backdrop-blur-md border border-[#D9B76F]/30 shadow-2xl absolute -bottom-5 -left-4 sm:-left-8 flex items-center gap-3">
+              <img src="assets/images/MAHV6wJch4k.jpg" alt="Mavy Massiel" class="w-11 h-11 rounded-full object-cover border border-[#D9B76F]" />
+              <div class="pr-2">
+                <p class="text-xs font-bold text-white">Mavy Massiel</p>
+                <p class="text-[11px] text-[#D9B76F]">@mavy_96_m • EN & ES</p>
               </div>
             </div>
           </div>
@@ -2039,14 +2092,53 @@
       }
     }
 
+    // =========================================================================
+    // HERO BACKGROUND VIDEO SWITCHER & AUDIO CONTROL
+    // =========================================================================
+    function switchHeroBgVideo(mp4Url, posterUrl, labelText, btnEl) {
+      const bgVid = document.getElementById('heroBgVideo');
+      const cardVid = document.getElementById('heroCardVideo');
+      const nowLabel = document.getElementById('heroNowPlayingLabel');
+      if (bgVid) {
+        bgVid.src = mp4Url;
+        bgVid.poster = posterUrl;
+        bgVid.play().catch(() => {});
+      }
+      if (cardVid) {
+        cardVid.src = mp4Url;
+        cardVid.poster = posterUrl;
+        cardVid.play().catch(() => {});
+      }
+      if (nowLabel && labelText) {
+        nowLabel.textContent = labelText;
+      }
+      document.querySelectorAll('.hero-vid-pill').forEach(b => {
+        b.className = 'hero-vid-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-white/10 text-white border border-white/20 hover:bg-white/20 transition-all';
+      });
+      if (btnEl) {
+        btnEl.className = 'hero-vid-pill px-3 py-1.5 rounded-full text-xs font-semibold bg-[#D9B76F] text-[#14201B] transition-all';
+      }
+    }
+
+    function toggleHeroBgAudio() {
+      const bgVid = document.getElementById('heroBgVideo');
+      const btn = document.getElementById('heroBgMuteBtn');
+      if (!bgVid) return;
+      bgVid.muted = !bgVid.muted;
+      if (bgVid.paused) bgVid.play().catch(() => {});
+      if (btn) {
+        btn.innerHTML = bgVid.muted ? '🔇 Unmute Background Reel' : '🔊 Background Audio On';
+      }
+    }
+
     const TRANSLATIONS = {
       en: {
         cta_book: 'Book Appointment',
-        nav_about: 'About & Intro Reel',
-        nav_portfolio: 'UGC Video Portfolio (13)',
-        nav_photos: 'UGC Photography',
-        nav_services: 'Deliverables & Packages',
-        nav_mediakit: 'Media Kit & Metrics',
+        nav_about: 'About',
+        nav_portfolio: 'Video Portfolio',
+        nav_photos: 'Photography',
+        nav_services: 'Packages',
+        nav_mediakit: 'Media Kit',
         hero_bilingual_badge: 'EN & ES Bilingual Creator',
         hero_script: '"Real moments, Real life"',
         hero_role: 'UGC & LIFESTYLE CONTENT CREATOR IN UAE',
@@ -2063,11 +2155,11 @@
       },
       es: {
         cta_book: 'Reservar Cita',
-        nav_about: 'Sobre Mí y Video Intro',
-        nav_portfolio: 'Portafolio de Videos UGC (13)',
-        nav_photos: 'Fotografía UGC',
-        nav_services: 'Paquetes y Entregables',
-        nav_mediakit: 'Media Kit y Métricas',
+        nav_about: 'Sobre Mí',
+        nav_portfolio: 'Videos UGC',
+        nav_photos: 'Fotografía',
+        nav_services: 'Paquetes',
+        nav_mediakit: 'Media Kit',
         hero_bilingual_badge: 'Creadora Bilingüe EN y ES',
         hero_script: '"Momentos reales, Vida real"',
         hero_role: 'CREADORA DE CONTENIDO UGC Y LIFESTYLE EN EMIRATOS ÁRABES',
@@ -2084,11 +2176,11 @@
       },
       ar: {
         cta_book: 'Book Appointment',
-        nav_about: 'نبذة عني وفيديو التعريف',
-        nav_portfolio: 'معرض فيديوهات UGC (13)',
-        nav_photos: 'تصوير المنتجات UGC',
-        nav_services: 'الباقات والخدمات',
-        nav_mediakit: 'ملف الإعلام والإحصائيات',
+        nav_about: 'نبذة عني',
+        nav_portfolio: 'فيديوهات UGC',
+        nav_photos: 'التصوير',
+        nav_services: 'الباقات',
+        nav_mediakit: 'ملف الإعلام',
         hero_bilingual_badge: 'صانعة محتوى بلغتين (EN / ES)',
         hero_script: '"لحظات حقيقية، حياة واقعية"',
         hero_role: 'صانعة محتوى UGC وأسلوب حياة في دبي، الإمارات',
