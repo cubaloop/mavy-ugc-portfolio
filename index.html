@@ -235,20 +235,6 @@
 </head>
 <body class="antialiased selection:bg-[#7A5A1E] selection:text-white">
 
-  <!-- TOP ANNOUNCEMENT BANNER (Editable from Tab 2 of Admin Dashboard) -->
-  <div id="topBanner" class="w-full py-2.5 px-4 text-center text-xs md:text-sm font-medium tracking-wide border-b transition-colors"
-       style="background-color: var(--bg-elevated); border-color: var(--border-subtle); color: var(--text-primary);">
-    <div class="max-w-7xl mx-auto flex items-center justify-center gap-2 flex-wrap">
-      <span class="inline-block w-2 h-2 rounded-full bg-emerald-600 live-dot"></span>
-      <span id="bannerText" data-i18n="banner_default">
-        ✨ 2026 Brand Collaborations Open in Dubai & GCC — Bilingual UGC (English & Spanish) • Fast 48–72h Turnaround
-      </span>
-      <button onclick="openBookingModal('General Collaboration')" class="underline font-semibold ml-1 hover:opacity-80" style="color: var(--accent-primary);" data-i18n="cta_book">
-        Book Appointment
-      </button>
-    </div>
-  </div>
-
   <!-- STICKY NAVIGATION HEADER (Single-Line Editorial Layout, Zero Wrapping) -->
   <header class="sticky top-0 z-40 glass-nav">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-18 py-3 flex items-center justify-between gap-4">
@@ -2216,7 +2202,8 @@
     }
 
     function initApp() {
-      document.getElementById('bannerText').textContent = state.banner;
+      const bt = document.getElementById('bannerText');
+      if (bt) bt.textContent = state.banner;
       renderPortfolioCategories();
       renderPortfolioVideos();
       renderServices();
